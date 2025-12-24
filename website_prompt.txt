@@ -1,0 +1,179 @@
+The website must look like a real, established US trading company.
+
+LANGUAGE & TONE
+---------------
+- Language: US English ONLY
+- Tone: Professional, corporate, confident
+- Style: Clear, neutral, trustworthy
+- Avoid hype, slang, or marketing exaggeration
+
+TECH STACK
+----------
+Framework: Next.js
+Mode: Static export only (no SSR, no backend now)
+Styling: CSS Modules or Tailwind CSS
+Hosting-ready: Vercel / Netlify
+No database, no authentication, no payments
+
+DESIGN REQUIREMENTS
+-------------------
+- Corporate & minimal design
+- White background
+- Dark navy / blue primary color
+- One clean font (Inter / Montserrat / Poppins)
+- No animations
+- No videos
+- No sliders
+- No product listings
+- Fully responsive (desktop + mobile)
+- Very fast loading (Lighthouse 90+)
+
+LOGO
+----
+Use provided logo text: "NEXOR COMMERCE"
+Logo placement:
+- Header (top left)
+- Footer
+
+NAVIGATION MENU
+---------------
+Home
+About Us
+Our Services
+Why Nexor
+Contact
+
+========================
+PAGE CONTENT (DETAILED)
+========================
+
+1) HOME PAGE
+------------
+Hero Section:
+Headline:
+"Reliable E-Commerce & Wholesale Partner"
+
+Subheadline:
+"Delivering trusted sourcing and online retail solutions through leading global marketplaces."
+
+Intro Paragraph:
+"Nexor Commerce LLC is a US-based e-commerce and wholesale company focused on sourcing quality products and distributing them through established online marketplaces such as Amazon. We operate with a strong commitment to professionalism, transparency, and long-term partnerships."
+
+Key Highlights (4 cards):
+- Trusted Wholesale Sourcing
+- Marketplace-Focused Distribution
+- Supplier Partnership Model
+- Operational Transparency
+
+Call to Action:
+Button text: "Contact Our Team"
+Link to: Contact page
+
+---
+
+2) ABOUT US
+-----------
+Section Title:
+"About Nexor Commerce"
+
+Content:
+"Nexor Commerce LLC is a modern e-commerce and wholesale company established to support brands, distributors, and suppliers with reliable online distribution.
+
+Our core operations focus on wholesale sourcing and marketplace-based retail, enabling efficient product placement, consistent sales channels, and brand integrity. We believe in building long-term relationships through clear communication, ethical sourcing, and dependable execution."
+
+Mission Statement:
+"Our mission is to create sustainable value by connecting quality products with global online marketplaces through efficient and transparent operations."
+
+Values (bullet points):
+- Professional integrity
+- Long-term partnerships
+- Operational efficiency
+- Market transparency
+
+---
+
+3) OUR SERVICES
+---------------
+Section Title:
+"What We Do"
+
+Intro Line:
+"We provide structured e-commerce and wholesale services designed for brands and distributors seeking reliable online distribution."
+
+Services List (with short descriptions):
+- Wholesale Sourcing  
+  Identifying and sourcing products directly from authorized suppliers and distributors.
+
+- Online Marketplace Retail  
+  Selling products through established online marketplaces with compliance and brand awareness.
+
+- Product Distribution  
+  Managing inventory flow and distribution across online channels.
+
+- Supplier Partnerships  
+  Working closely with suppliers to establish consistent and scalable supply relationships.
+
+---
+
+4) WHY NEXOR
+------------
+Section Title:
+"Why Partner With Nexor"
+
+Content Blocks:
+- Marketplace Expertise  
+  Deep understanding of online marketplace operations and requirements.
+
+- Reliable Operations  
+  Structured workflows designed for consistency and accountability.
+
+- Transparent Communication  
+  Clear and professional engagement with all partners.
+
+- Long-Term Focus  
+  Commitment to sustainable partnerships rather than short-term gains.
+
+---
+
+5) CONTACT PAGE
+---------------
+Section Title:
+"Contact Us"
+
+Text:
+"We welcome inquiries from brands, distributors, and business partners interested in working with Nexor Commerce LLC."
+
+Contact Details:
+Email: sales@nexorcommerce.com
+
+Contact Form Fields:
+- Full Name
+- Company Name
+- Email Address
+- Message
+
+Submit button text:
+"Send Message"
+
+(No phone number required)
+
+---
+
+FOOTER
+------
+Footer text:
+"© Nexor Commerce LLC. All rights reserved."
+
+OPTIONAL FOOTER LINKS:
+- Privacy Policy
+- Terms of Use
+
+(Static placeholder pages only, no legal drafting required)
+
+FINAL VALIDATION CHECK
+----------------------
+- Website must look like a legitimate US-based corporate trading company
+- All content must be professional and business-oriented
+- No sales language, no e-commerce checkout
+- Brand, company name, domain, and email must match consistently
+- Ready for supplier and Amazon verification

@@ -1,0 +1,14 @@
+{
+  "/": "pages/index.html",
+  "/_error": "pages/_error.js",
+  "/about": "pages/about.html",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/contact": "pages/contact.html",
+  "/our-services": "pages/our-services.html",
+  "/what-we-do": "pages/what-we-do.html",
+  "/privacy": "pages/privacy.html",
+  "/why-nexor": "pages/why-nexor.html",
+  "/terms": "pages/terms.html",
+  "/404": "pages/404.html"
+}
