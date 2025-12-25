@@ -4,6 +4,6 @@
   "/_document": "pages/_document.js",
   "/api/contact": "pages/api/contact.js",
   "/contact": "pages/contact.js",
-  "/why-nexor": "pages/why-nexor.js",
+  "/": "pages/index.js",
   "/our-services": "pages/our-services.js"
 }

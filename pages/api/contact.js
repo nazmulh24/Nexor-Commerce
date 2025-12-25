@@ -115,70 +115,167 @@ export default async function handler(req, res) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Inquiry</title>
+    <style>
+        .container { width: 100% !important; max-width: 650px !important; }
+        .info-label { display: inline-block !important; vertical-align: top !important; }
+        .info-value { word-break: break-word !important; }
+        
+        @media only screen and (max-width: 600px) {
+            body { padding: 8px !important; background-color: #f5f7fa !important; }
+            .container { 
+                max-width: 100% !important; 
+                width: 100% !important;
+                margin: 0 !important; 
+                border-radius: 12px !important; 
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1) !important;
+            }
+            .header-padding { padding: 16px 12px !important; }
+            .content-padding { padding: 12px !important; }
+            .header-title { font-size: 20px !important; line-height: 1.2 !important; }
+            .header-subtitle { font-size: 14px !important; margin-top: 4px !important; }
+            .section-title { font-size: 16px !important; margin-bottom: 10px !important; }
+            .info-table { margin-bottom: 12px !important; border-radius: 8px !important; }
+            .info-cell { 
+                padding: 8px 10px !important;
+                display: block !important;
+            }
+            .info-label { 
+                width: auto !important; 
+                font-size: 11px !important;
+                display: block !important;
+                margin-bottom: 2px !important;
+            }
+            .info-value { 
+                font-size: 12px !important;
+                display: block !important;
+                word-break: break-all !important;
+            }
+            .message-container { 
+                padding: 10px !important; 
+                border-radius: 8px !important;
+                margin-bottom: 12px !important;
+            }
+            .message-text { 
+                font-size: 12px !important; 
+                line-height: 1.4 !important;
+                word-break: break-word !important;
+            }
+            .reply-button { 
+                padding: 10px 20px !important; 
+                font-size: 13px !important; 
+                border-radius: 8px !important;
+                display: block !important;
+                width: auto !important;
+                text-align: center !important;
+                margin: 0 auto !important;
+                max-width: 200px !important;
+            }
+            .footer-padding { padding: 10px 12px !important; }
+            .footer-text { 
+                font-size: 10px !important;
+                line-height: 1.3 !important;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            body { padding: 6px !important; }
+            .container { border-radius: 10px !important; }
+            .header-padding { padding: 12px 10px !important; }
+            .content-padding { padding: 10px !important; }
+            .header-title { font-size: 18px !important; }
+            .header-subtitle { font-size: 13px !important; }
+            .section-title { font-size: 15px !important; }
+            .info-cell { padding: 6px 8px !important; }
+            .info-label { font-size: 10px !important; }
+            .info-value { font-size: 11px !important; }
+            .message-container { padding: 8px !important; border-radius: 6px !important; }
+            .message-text { font-size: 11px !important; }
+            .reply-button { 
+                padding: 8px 16px !important; 
+                font-size: 12px !important; 
+                border-radius: 6px !important;
+                max-width: 160px !important;
+            }
+            .footer-padding { padding: 8px 10px !important; }
+            .footer-text { font-size: 9px !important; }
+        }
+    </style>
 </head>
-<body style="margin: 0; padding: 24px; font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f7fa; color: #1a202c;">
+<body style="margin: 0; padding: 12px; font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f7fa; color: #1a202c;">
     
-    <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 650px; margin: 0 auto; background: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04); overflow: hidden;">
+    <table width="100%" cellpadding="0" cellspacing="0" class="container" style="max-width: 650px; margin: 0 auto; background: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04); overflow: hidden;">
         
         <!-- Header -->
         <tr>
-            <td style="background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); color: #ffffff; padding: 40px 36px; text-align: center;">
-                <h1 style="margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">Business Inquiry</h1>
-                <p style="margin: 12px 0 0; opacity: 0.9; font-size: 17px; font-weight: 500;">Nexor Commerce LLC</p>
+            <td class="header-padding" style="background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); color: #ffffff; padding: 32px 24px; text-align: center;">
+                <h1 class="header-title" style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">Business Inquiry</h1>
+                <p class="header-subtitle" style="margin: 8px 0 0; opacity: 0.9; font-size: 15px; font-weight: 500;">Nexor Commerce LLC</p>
             </td>
         </tr>
         
         <!-- Content -->
         <tr>
-            <td style="padding: 40px 36px;">
+            <td class="content-padding" style="padding: 32px 24px;">
                 
                 <!-- Contact Information -->
-                <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 36px; background: #f8fafc; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0;">
+                <table width="100%" cellpadding="0" cellspacing="0" class="info-table" style="margin-bottom: 28px; background: #f8fafc; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0;">
                     <tr>
-                        <td style="padding: 20px 24px; border-bottom: 1px solid #e2e8f0;">
-                            <strong style="color: #4a5568; display: inline-block; width: 90px; font-size: 15px; font-weight: 600;">Name:</strong>
-                            <span style="color: #1a202c; font-size: 15px; font-weight: 500;">${escapeHtml(
-                              sanitizedData.fullName
-                            )}</span>
+                        <td class="info-cell" style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0;">
+                            <div>
+                                <strong class="info-label" style="color: #4a5568; display: inline-block; width: 80px; font-size: 14px; font-weight: 600;">Name:</strong>
+                                <span class="info-value" style="color: #1a202c; font-size: 14px; font-weight: 500;">${escapeHtml(
+                                  sanitizedData.fullName
+                                )}</span>
+                            </div>
                         </td>
                     </tr>
                     <tr>
-                        <td style="padding: 20px 24px; border-bottom: 1px solid #e2e8f0;">
-                            <strong style="color: #4a5568; display: inline-block; width: 90px; font-size: 15px; font-weight: 600;">Email:</strong>
-                            <a href="mailto:${escapeHtml(
-                              sanitizedData.email
-                            )}" style="color: #3182ce; text-decoration: none; font-size: 15px; font-weight: 500; border-bottom: 1px solid #3182ce;">${escapeHtml(
+                        <td class="info-cell" style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0;">
+                            <div>
+                                <strong class="info-label" style="color: #4a5568; display: inline-block; width: 80px; font-size: 14px; font-weight: 600;">Email:</strong>
+                                <a href="mailto:${escapeHtml(
+                                  sanitizedData.email
+                                )}" class="info-value" style="color: #3182ce; text-decoration: none; font-size: 14px; font-weight: 500; border-bottom: 1px solid #3182ce;">${escapeHtml(
       sanitizedData.email
     )}</a>
+                            </div>
                         </td>
                     </tr>
                     <tr>
-                        <td style="padding: 20px 24px; border-bottom: 1px solid #e2e8f0;">
-                            <strong style="color: #4a5568; display: inline-block; width: 90px; font-size: 15px; font-weight: 600;">Company:</strong>
-                            <span style="color: #1a202c; font-size: 15px; font-weight: 500;">${escapeHtml(
-                              sanitizedData.company || "Not specified"
-                            )}</span>
+                        <td class="info-cell" style="padding: 16px 20px; border-bottom: 1px solid #e2e8f0;">
+                            <div>
+                                <strong class="info-label" style="color: #4a5568; display: inline-block; width: 80px; font-size: 14px; font-weight: 600;">Company:</strong>
+                                <span class="info-value" style="color: #1a202c; font-size: 14px; font-weight: 500;">${escapeHtml(
+                                  sanitizedData.company || "Not specified"
+                                )}</span>
+                            </div>
                         </td>
                     </tr>
                     <tr>
-                        <td style="padding: 20px 24px;">
-                            <strong style="color: #4a5568; display: inline-block; width: 90px; font-size: 15px; font-weight: 600;">Date:</strong>
-                            <span style="color: #1a202c; font-size: 15px; font-weight: 500;">${new Date().toLocaleDateString(
-                              "en-US",
-                              { year: "numeric", month: "long", day: "numeric" }
-                            )} at ${new Date().toLocaleTimeString("en-US", {
+                        <td class="info-cell" style="padding: 16px 20px;">
+                            <div>
+                                <strong class="info-label" style="color: #4a5568; display: inline-block; width: 80px; font-size: 14px; font-weight: 600;">Date:</strong>
+                                <span class="info-value" style="color: #1a202c; font-size: 14px; font-weight: 500;">${new Date().toLocaleDateString(
+                                  "en-US",
+                                  {
+                                    year: "numeric",
+                                    month: "short",
+                                    day: "numeric",
+                                  }
+                                )} ${new Date().toLocaleTimeString("en-US", {
       hour: "2-digit",
       minute: "2-digit",
     })}</span>
+                            </div>
                         </td>
                     </tr>
                 </table>
                 
                 <!-- Message -->
-                <div style="margin-bottom: 36px;">
-                    <h3 style="margin: 0 0 20px; color: #2d3748; font-size: 20px; font-weight: 700; letter-spacing: -0.3px;">Message Content:</h3>
-                    <div style="background: #f7fafc; border: 2px solid #e2e8f0; border-left: 6px solid #2d3748; padding: 28px; border-radius: 12px;">
-                        <pre style="margin: 0; color: #1a202c; font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 16px; line-height: 1.7; white-space: pre-wrap; word-wrap: break-word; font-weight: 400;">${escapeHtml(
+                <div style="margin-bottom: 28px;">
+                    <h3 class="section-title" style="margin: 0 0 16px; color: #2d3748; font-size: 18px; font-weight: 700; letter-spacing: -0.3px;">Message Content:</h3>
+                    <div class="message-container" style="background: #f7fafc; border: 2px solid #e2e8f0; border-left: 6px solid #2d3748; padding: 20px; border-radius: 12px;">
+                        <pre class="message-text" style="margin: 0; color: #1a202c; font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 15px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word; font-weight: 400;">${escapeHtml(
                           sanitizedData.message
                         )}</pre>
                     </div>
@@ -189,7 +286,7 @@ export default async function handler(req, res) {
                     <a href="mailto:${escapeHtml(
                       sanitizedData.email
                     )}?subject=Re: Your Business Inquiry" 
-                       style="display: inline-block; background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); color: #ffffff; padding: 16px 32px; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 16px; letter-spacing: 0.2px; box-shadow: 0 4px 14px rgba(45, 55, 72, 0.3); transition: all 0.2s ease;">
+                       class="reply-button" style="display: inline-block; background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 15px; letter-spacing: 0.2px; box-shadow: 0 4px 14px rgba(45, 55, 72, 0.3);">
                        Reply to Inquiry
                     </a>
                 </div>
@@ -199,12 +296,14 @@ export default async function handler(req, res) {
         
         <!-- Footer -->
         <tr>
-            <td style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); padding: 24px 36px; text-align: center; border-top: 1px solid #e2e8f0;">
-                <p style="margin: 0; color: #718096; font-size: 14px; font-weight: 500;">
-                    Nexor Commerce LLC • Business Inquiry • ${new Date().toLocaleDateString(
-                      "en-US",
-                      { year: "numeric", month: "long", day: "numeric" }
-                    )}
+            <td class="footer-padding" style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); padding: 20px 24px; text-align: center; border-top: 1px solid #e2e8f0;">
+                <p class="footer-text" style="margin: 0; color: #718096; font-size: 13px; font-weight: 500;">
+                    Nexor Commerce LLC • Business Inquiry<br>
+                    ${new Date().toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })}
                 </p>
             </td>
         </tr>
