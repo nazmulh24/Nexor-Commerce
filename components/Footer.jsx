@@ -2,7 +2,6 @@ import Link from "next/link";
 import {
   FaEnvelope,
   FaPhone,
-  FaMapMarkerAlt,
   FaAmazon,
   FaLinkedin,
   FaFacebook,
@@ -100,19 +99,34 @@ export default function Footer() {
                   <FaPhone className="footer-icon" />
                   <a href="tel:+1234567890">+1 (234) 567-890</a>
                 </li>
-                <li className="footer-contact-item">
+                {/* <li className="footer-contact-item">
                   <FaMapMarkerAlt className="footer-icon" />
                   <p>
                     Nexor Commerce LLC
                     <br />
                     United States
                   </p>
-                </li>
+                </li> */}
               </ul>
+              <p className="footer-contact-note">
+                Our team responds to business inquiries during standard US
+                business hours.
+              </p>
             </div>
           </div>
         </div>
         <div className="footer-bottom">
+          <div className="footer-language-flags">
+            <button className="language-selector active" title="English">
+              <span className="flag-icon">🇺🇸</span>
+              <span className="language-text">EN</span>
+            </button>
+            <span className="language-divider">|</span>
+            <button className="language-selector" title="Español">
+              <span className="flag-icon">🇪🇸</span>
+              <span className="language-text">ES</span>
+            </button>
+          </div>
           <p className="footer-copyright">
             &copy; {year} Nexor Commerce LLC. All rights reserved.
           </p>
