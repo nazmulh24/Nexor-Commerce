@@ -89,7 +89,7 @@ export default function Footer() {
             </div>
             <div className="footer-column">
               <h3 className="footer-heading">Contact Us</h3>
-              <ul className="footer-menu">
+              <ul className="footer-contact-menu">
                 <li className="footer-contact-item">
                   <FaEnvelope className="footer-icon" />
                   <a href="mailto:sales@nexorcommerce.com">
