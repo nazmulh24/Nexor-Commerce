@@ -87,12 +87,15 @@ export default async function handler(req, res) {
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_SERVER_HOST,
     port: parseInt(process.env.EMAIL_SERVER_PORT, 10),
-    secure: parseInt(process.env.EMAIL_SERVER_PORT, 10) === 465,
+    secure: false, // true for 465, false for other ports
     auth: {
       user: process.env.EMAIL_SERVER_USER,
       pass: process.env.EMAIL_SERVER_PASSWORD,
     },
-    // Removed insecure TLS setting for better security
+    tls: {
+      ciphers: 'SSLv3',
+      rejectUnauthorized: false
+    }
   });
 
   const mailOptions = {
