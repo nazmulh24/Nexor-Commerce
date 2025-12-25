@@ -5,6 +5,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/our-services", label: "Our Services" },
+  { href: "/what-we-do", label: "What We Do" },
   { href: "/why-nexor", label: "Why Nexor" },
   { href: "/contact", label: "Contact" },
 ];
